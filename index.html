@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YourPackage</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+
+        .navbar-container {
+            position: fixed;
+            z-index: 99;
+        }
+
+        .front_page {
+            width: 100vw;
+            height: 100vh;
+            max-width: 100%;
+            box-sizing: border-box;
+            display: flex;
+            background: url('img/background.PNG') no-repeat center center/cover;
+        }
+
+        .front_page img {
+            width: 60%;
+            border: whitesmoke 10px solid;
+            border-radius: 100%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-right: -50%;
+            transform: translate(-20%, -50%)
+        }
+
+        @media (max-width: 575.98px) {
+
+            .front_page img {
+                width: 75%;
+                border: whitesmoke 10px solid;
+                border-radius: 100%;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                margin-right: -50%;
+                transform: translate(-50%, -50%)
+            }
+
+            .title {
+                color: brown;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                margin-right: -50%;
+                transform: translate(-50%, -50%);
+                margin-top: -20%;
+            }
+
+        }
+
+        .title {
+            color: brown;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-right: -50%;
+            transform: translate(-50%, -50%);
+        }
+
+        #whatsapp {
+            color: #25D366;
+            border-color: #25D366;
+            width: 150px;
+        }
+
+        #whatsapp:hover {
+            color: #fff;
+            background-color: #25D366;
+            border-color: #25D366;
+        }
+
+        #shopee {
+            color: #fe5722;
+            border-color: #fe5722;
+            width: 150px;
+        }
+
+        #shopee:hover {
+            color: #fff;
+            background-color: #fe5722;
+            border-color: #fe5722;
+        }
+
+        .title button {
+            margin: 8px;
+        }
+
+        .container {
+            width: 100vw;
+            max-width: 100%;
+            padding: 30px;
+        }
+
+        .row {
+            height: 100%;
+            text-align: center;
+        }
+
+        .row-product img {
+            width: 60%;
+            border: whitesmoke 5px solid;
+            border-radius: 5%;
+            margin-top: 10%;
+        }
+
+        .main {
+            background-color: burlywood;
+            width: 100vw;
+            max-width: 100%;
+            box-sizing: border-box;
+            display: flex;
+        }
+
+        .main2 {
+            background-color: lightgreen;
+            width: 100vw;
+            max-width: 100%;
+            box-sizing: border-box;
+            display: flex;
+        }
+
+        .main3 {
+            background-color: aqua;
+            width: 100vw;
+            max-width: 100%;
+            box-sizing: border-box;
+            display: flex;
+            height: 400px;
+        }
+
+        .main4 {
+            background-color: darkorange;
+            width: 100vw;
+            max-width: 100%;
+            box-sizing: border-box;
+            display: flex;
+            height: 300px;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div class="front_page" id="home">
+        <div class="navbar-container">
+            <nav class="navbar navbar-expand-sm navbar-light">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+                    aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                        <a class="nav-item nav-link" href="#home">Home</a>
+                        <a class="nav-item nav-link" href="#product">Product</a>
+                        <a class="nav-item nav-link" href="#findme">Contact</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-6 col-md-6 col-lg-6 col-sm-6">
+                    <img src="img/your-package v2.png" alt="yourpackage_logo" srcset="">
+                </div>
+                <div class="col-xl-6 col-md-6 col-lg-6 col-sm-6">
+                    <div class="title">
+                        <h1>YourPackage</h1>
+                        <h4>- Your Lovely Mask -</h4>
+                        <button type="button" id="whatsapp" class="btn btn-outline-primary">Whatsapp</button> <br>
+                        <button type="button" id="shopee" class="btn btn-outline-primary">Shopee</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="main" id="product">
+        <div class="container">
+            <div class="row row-product">
+                <div class="col-xl-4 col-md-4 col-lg-4 col-sm4">
+                    <img src="img/chocolate.jpg" alt="chocolate"> <br>
+                    <button type="button" id="whatsapp" class="btn btn-outline-primary mt-3">Whatsapp</button> <br>
+                    <button type="button" id="shopee" class="btn btn-outline-primary mb-3 mt-2">Shopee</button>
+                </div>
+                <div class="col-xl-4 col-md-4 col-lg-4 col-sm4">
+                    <img src="img/coffee.jpg" alt="coffee"> <br>
+                    <button type="button" id="whatsapp" class="btn btn-outline-primary mt-3">Whatsapp</button> <br>
+                    <button type="button" id="shopee" class="btn btn-outline-primary mb-3 mt-2">Shopee</button>
+                </div>
+                <div class="col-xl-4 col-md-4 col-lg-4 col-sm4">
+                    <img src="img/greentea.jpg" alt="greentea"> <br>
+                    <button type="button" id="whatsapp" class="btn btn-outline-primary mt-3">Whatsapp</button> <br>
+                    <button type="button" id="shopee" class="btn btn-outline-primary mb-3 mt-2">Shopee</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="main2">
+        <div class="container">
+            <div class="row row-product">
+                <div class="col-xl-4 col-md-4 col-lg-4 col-sm4">
+                    <img src="img/lemon.jpg" alt="lemon"> <br>
+                    <button type="button" id="whatsapp" class="btn btn-outline-primary mt-3">Whatsapp</button> <br>
+                    <button type="button" id="shopee" class="btn btn-outline-primary mb-3 mt-2">Shopee</button>
+                </div>
+                <div class="col-xl-4 col-md-4 col-lg-4 col-sm4">
+                    <img src="img/milk.jpg" alt="milk"> <br>
+                    <button type="button" id="whatsapp" class="btn btn-outline-primary mt-3">Whatsapp</button> <br>
+                    <button type="button" id="shopee" class="btn btn-outline-primary mb-3 mt-2">Shopee</button>
+                </div>
+                <div class="col-xl-4 col-md-4 col-lg-4 col-sm4">
+                    <img src="img/strawberry.jpg" alt="strawberry"> <br>
+                    <button type="button" id="whatsapp" class="btn btn-outline-primary mt-3">Whatsapp</button> <br>
+                    <button type="button" id="shopee" class="btn btn-outline-primary mb-3 mt-2">Shopee</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="main3">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12 sm-12 bg-dark">
+                    1 of 3
+                </div>
+                <div class="col-xl-12 sm-12 bg-light">
+                    2 of 3
+                </div>
+                <div class="col-xl-12 sm-12 bg-dark">
+                    3 of 3
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="main4">ini main content 4</div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
