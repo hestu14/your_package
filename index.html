@@ -9,6 +9,11 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Marck+Script&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Chewy&display=swap" rel="stylesheet">
+
     <style>
         html,
         body {
@@ -29,29 +34,30 @@
             max-width: 100%;
             box-sizing: border-box;
             display: flex;
-            background: url('img/background.PNG') no-repeat center center/cover;
+            background-color: #f7c2b7;
         }
 
         .front_page img {
             width: 60%;
-            border: whitesmoke 10px solid;
+            border: #f9d6ce 10px solid;
             border-radius: 100%;
             position: absolute;
             top: 50%;
             left: 50%;
             margin-right: -50%;
-            transform: translate(-20%, -50%)
+            transform: translate(-20%, -50%);
         }
 
         @media (max-width: 575.98px) {
             .front_page img {
                 width: 60%;
-                border: whitesmoke 10px solid;
+                border: #f9d6ce 10px solid;
                 border-radius: 100%;
                 position: absolute;
                 top: 50%;
                 left: 50%;
                 margin-right: -50%;
+                margin-top: 5%;
                 transform: translate(-50%, -50%)
             }
 
@@ -61,6 +67,7 @@
                 top: 50%;
                 left: 50%;
                 margin-right: -50%;
+                margin-top: 5%;
                 transform: translate(-50%, -50%);
             }
 
@@ -78,7 +85,7 @@
         #whatsapp {
             color: #25D366;
             border-color: #25D366;
-            width: 150px;
+            width: 140px;
         }
 
         #whatsapp:hover {
@@ -87,16 +94,48 @@
             border-color: #25D366;
         }
 
+        #whatsapp:focus {
+            box-shadow: 0 0 0 .0rem rgb(37, 211, 102, 0.7);
+            color: #fff;
+            background-color: #25D366;
+            border-color: #25D366;
+        }
+
+        .fa-whatsapp {
+            font-size: 1.35rem;
+            float: left;
+            padding-top: 1%;
+        }
+
         #shopee {
             color: #fe5722;
             border-color: #fe5722;
-            width: 150px;
+            width: 140px;
+            background-image: url('img/shopee.png');
+            background-repeat: no-repeat;
+            background-size: 1.5rem;
+            background-position: 7.5% 50%
         }
 
         #shopee:hover {
             color: #fff;
             background-color: #fe5722;
             border-color: #fe5722;
+            background-image: url('img/shopee_light.png');
+            background-repeat: no-repeat;
+            background-size: 1.5rem;
+            background-position: 7.5% 50%
+        }
+
+        #shopee:focus {
+            box-shadow: 0 0 0 .0rem rgb(254, 87, 34, 0.7);
+            color: #fff;
+            background-color: #fe5722;
+            border-color: #fe5722;
+            background-image: url('img/shopee_light.png');
+            background-repeat: no-repeat;
+            background-size: 1.5rem;
+            background-position: 7.5% 50%
         }
 
         .title button {
@@ -115,10 +154,9 @@
         }
 
         .row-product img {
-            width: 60%;
+            width: 70%;
             border: whitesmoke 5px solid;
             border-radius: 5%;
-            margin-top: 10%;
         }
 
         .main {
@@ -138,7 +176,7 @@
         }
 
         .main3 {
-            background-color: aqua;
+            background-color: #cedcf9;
             width: 100vw;
             max-width: 100%;
             box-sizing: border-box;
@@ -147,12 +185,24 @@
         }
 
         .main4 {
-            background-color: darkorange;
+            background-color: #8aabf1;
             width: 100vw;
             max-width: 100%;
             box-sizing: border-box;
             display: flex;
             height: 300px;
+        }
+
+        .text-product {
+            font-family: 'Marck Script', cursive;
+            font-size: 26px;
+            color: brown;
+        }
+
+        .why-title {
+            font-family: 'Chewy', cursive;
+            font-size: 40px;
+            color: brown;
         }
     </style>
 </head>
@@ -179,13 +229,14 @@
         <div class="container">
             <div class="row">
                 <div class="col-xl-6 col-md-6 col-lg-6 col-sm-6">
-                    <img src="img/your-package v2.png" alt="yourpackage_logo" srcset="">
+                    <img src="img/your-package-logo.png" alt="yourpackage_logo" srcset="">
                 </div>
                 <div class="col-xl-6 col-md-6 col-lg-6 col-sm-6">
                     <div class="title">
                         <h1>YourPackage</h1>
-                        <h4>- Your Lovely Mask -</h4>
-                        <button type="button" id="whatsapp" class="btn btn-outline-primary">Whatsapp</button> <br>
+                        <h4>- Lovely Face Mask -</h4>
+                        <button type="button" id="whatsapp" class="btn btn-outline-primary"><i
+                                class="fa fa-whatsapp"></i>Whatsapp</button> <br>
                         <button type="button" id="shopee" class="btn btn-outline-primary">Shopee</button>
                     </div>
                 </div>
@@ -196,20 +247,17 @@
     <div class="main" id="product">
         <div class="container">
             <div class="row row-product">
-                <div class="col-xl-4 col-md-4 col-lg-4 col-sm4">
-                    <img src="img/chocolate.jpg" alt="chocolate"> <br>
-                    <button type="button" id="whatsapp" class="btn btn-outline-primary mt-3">Whatsapp</button> <br>
-                    <button type="button" id="shopee" class="btn btn-outline-primary mb-3 mt-2">Shopee</button>
+                <div class="col-xl-4 col-md-4 col-lg-4 col-sm4 mt-3 mb-3">
+                    <img src="img/chocolate.jpg" alt="chocolate">
+                    <p class="text-product mt-3">Chocolate</p>
                 </div>
-                <div class="col-xl-4 col-md-4 col-lg-4 col-sm4">
-                    <img src="img/coffee.jpg" alt="coffee"> <br>
-                    <button type="button" id="whatsapp" class="btn btn-outline-primary mt-3">Whatsapp</button> <br>
-                    <button type="button" id="shopee" class="btn btn-outline-primary mb-3 mt-2">Shopee</button>
+                <div class="col-xl-4 col-md-4 col-lg-4 col-sm4 mt-3 mb-3">
+                    <img src="img/coffee.jpg" alt="coffee">
+                    <p class="text-product mt-3">Coffee</p>
                 </div>
-                <div class="col-xl-4 col-md-4 col-lg-4 col-sm4">
-                    <img src="img/greentea.jpg" alt="greentea"> <br>
-                    <button type="button" id="whatsapp" class="btn btn-outline-primary mt-3">Whatsapp</button> <br>
-                    <button type="button" id="shopee" class="btn btn-outline-primary mb-3 mt-2">Shopee</button>
+                <div class="col-xl-4 col-md-4 col-lg-4 col-sm4 mt-3 mb-3">
+                    <img src="img/strawberry.jpg" alt="strawberry">
+                    <p class="text-product mt-3">Strawberry</p>
                 </div>
             </div>
         </div>
@@ -217,40 +265,40 @@
     <div class="main2">
         <div class="container">
             <div class="row row-product">
-                <div class="col-xl-4 col-md-4 col-lg-4 col-sm4">
-                    <img src="img/lemon.jpg" alt="lemon"> <br>
-                    <button type="button" id="whatsapp" class="btn btn-outline-primary mt-3">Whatsapp</button> <br>
-                    <button type="button" id="shopee" class="btn btn-outline-primary mb-3 mt-2">Shopee</button>
+                <div class="col-xl-4 col-md-4 col-lg-4 col-sm4 mt-3 mb-3">
+                    <img src="img/lemon.jpg" alt="lemon">
+                    <p class="text-product mt-3">Lemon</p>
                 </div>
-                <div class="col-xl-4 col-md-4 col-lg-4 col-sm4">
-                    <img src="img/milk.jpg" alt="milk"> <br>
-                    <button type="button" id="whatsapp" class="btn btn-outline-primary mt-3">Whatsapp</button> <br>
-                    <button type="button" id="shopee" class="btn btn-outline-primary mb-3 mt-2">Shopee</button>
+                <div class="col-xl-4 col-md-4 col-lg-4 col-sm4 mt-3 mb-3">
+                    <img src="img/milk.jpg" alt="milk">
+                    <p class="text-product mt-3">Milk</p>
                 </div>
-                <div class="col-xl-4 col-md-4 col-lg-4 col-sm4">
-                    <img src="img/strawberry.jpg" alt="strawberry"> <br>
-                    <button type="button" id="whatsapp" class="btn btn-outline-primary mt-3">Whatsapp</button> <br>
-                    <button type="button" id="shopee" class="btn btn-outline-primary mb-3 mt-2">Shopee</button>
+                <div class="col-xl-4 col-md-4 col-lg-4 col-sm4 mt-3 mb-3">
+                    <img src="img/greentea.jpg" alt="greentea">
+                    <p class="text-product mt-3">Greentea</p>
                 </div>
             </div>
         </div>
     </div>
     <div class="main3">
         <div class="container">
-            <div class="row">
-                <div class="col-xl-12 sm-12 bg-dark">
-                    1 of 3
+            <div class="row row-why">
+                <div class="col-xl-12 sm-12 why-title">
+                    Why use our product ?
                 </div>
-                <div class="col-xl-12 sm-12 bg-light">
-                    2 of 3
+                <div class="col-xl-12 sm-12">
+                    Alasan #1
                 </div>
-                <div class="col-xl-12 sm-12 bg-dark">
-                    3 of 3
+                <div class="col-xl-12 sm-12">
+                    Alasan #2
+                </div>
+                <div class="col-xl-12 sm-12">
+                    Alasan #3
                 </div>
             </div>
         </div>
     </div>
-    <div class="main4">ini main content 4</div>
+    <div class="main4" id="findme">ini main content #4</div>
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
