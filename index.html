@@ -181,7 +181,7 @@
             max-width: 100%;
             box-sizing: border-box;
             display: flex;
-            height: 400px;
+            max-height: 800px;
         }
 
         .main4 {
@@ -203,6 +203,42 @@
             font-family: 'Chewy', cursive;
             font-size: 40px;
             color: brown;
+        }
+
+        .accordion {
+            width: 100%;
+        }
+
+        .card, .card-header {
+            background-color: #cedcf9;
+            border: 0;
+        }
+
+        .btn-link {
+            text-decoration: none;
+            color: maroon;
+            width: 100px;
+            border: 2px #8aabf1 solid;
+        }
+
+        .btn-link:hover {
+            text-decoration: none;
+            color: maroon;
+            width: 100px;
+            border: 2px #8aabf1 solid;
+        }
+
+        .btn-link:focus {
+            text-decoration: none;
+            color: maroon;
+            width: 100px;
+            border: 2px #8aabf1 solid;
+        }
+
+        .card-body {
+            color: maroon;
+            padding: 0;
+            padding-bottom: 30px;
         }
     </style>
 </head>
@@ -286,15 +322,51 @@
                 <div class="col-xl-12 sm-12 why-title">
                     Why use our product ?
                 </div>
-                <div class="col-xl-12 sm-12">
-                    Alasan #1
-                </div>
-                <div class="col-xl-12 sm-12">
-                    Alasan #2
-                </div>
-                <div class="col-xl-12 sm-12">
-                    Alasan #3
-                </div>
+                <div class="accordion" id="accordionExample">
+                    <div class="card">
+                      <div class="card-header" id="headingOne">
+                        <h2 class="mb-0">
+                          <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            AMAN
+                          </button>
+                        </h2>
+                      </div>
+                  
+                      <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                        <div class="card-body">
+                            Menggunakan bahan dasar organik dan tentunya sudah sesuai dengan standar untuk penggunaan masker wajah, ijin BPOM lagi proses nih.
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <div class="card-header" id="headingTwo">
+                        <h2 class="mb-0">
+                          <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            VARIATIF
+                          </button>
+                        </h2>
+                      </div>
+                      <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                        <div class="card-body">
+                            Tersedia banyak varian yang memang disesuaikan dengan kebutuhan wajah kalian masing-masing, kami mengerti kalian banget kok.
+                        </div>
+                      </div>
+                    </div>
+                    <!-- <div class="card">
+                      <div class="card-header" id="headingThree">
+                        <h2 class="mb-0">
+                          <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            Collapsible Group Item #3
+                          </button>
+                        </h2>
+                      </div>
+                      <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                        <div class="card-body">
+                          Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                        </div>
+                      </div>
+                    </div> -->
+                  </div>
             </div>
         </div>
     </div>
