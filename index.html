@@ -23,6 +23,8 @@
             scroll-behavior: smooth;
         }
 
+
+        /* bagian head */
         .navbar-container {
             position: fixed;
             z-index: 99;
@@ -142,6 +144,9 @@
             margin: 8px;
         }
 
+
+        /* bagian main1 & main 2 product */
+
         .container {
             width: 100vw;
             max-width: 100%;
@@ -154,13 +159,13 @@
         }
 
         .row-product img {
-            width: 70%;
-            border: whitesmoke 5px solid;
+            width: 90%;
+            border: salmon 5px solid;
             border-radius: 5%;
         }
 
         .main {
-            background-color: burlywood;
+            background-color: rgb(222, 184, 135, 0.6);
             width: 100vw;
             max-width: 100%;
             box-sizing: border-box;
@@ -168,12 +173,40 @@
         }
 
         .main2 {
-            background-color: lightgreen;
+            background-color: rgb(133, 236, 133);
             width: 100vw;
             max-width: 100%;
             box-sizing: border-box;
             display: flex;
         }
+
+        .text-product {
+            font-family: 'Marck Script', cursive;
+            font-size: 26px;
+            color: brown;
+        }
+
+        .box-product {
+            width: 80%;
+            background-color: whitesmoke;
+            height: 100%;
+            position: relative;
+            border-radius: 20px;
+            padding: 1rem;
+            padding-top: 2rem;
+            margin-left: auto;
+            margin-right: auto;
+            box-shadow: 8px 8px 8px rgb(143, 147, 148);
+        }
+
+        @media (max-width: 575.98px) {
+            .box-product {
+                width: 90%;
+            }
+        }
+
+
+        /* bagian alasan product */
 
         .main3 {
             background-color: #cedcf9;
@@ -184,32 +217,35 @@
             max-height: 800px;
         }
 
-        .main4 {
-            background-color: #8aabf1;
-            width: 100vw;
-            max-width: 100%;
-            box-sizing: border-box;
-            display: flex;
-            height: 300px;
-        }
-
-        .text-product {
-            font-family: 'Marck Script', cursive;
-            font-size: 26px;
-            color: brown;
-        }
-
         .why-title {
-            font-family: 'Chewy', cursive;
+            font-family: 'Marck Script', cursive;
             font-size: 40px;
             color: brown;
+            margin-top: -20px;
+        }
+
+        @media (max-width: 575.98px) {
+            .why-title {
+                font-size: 30px;
+            }
         }
 
         .accordion {
-            width: 100%;
+            width: 40%;
+            margin-left: auto;
+            margin-right: auto;
         }
 
-        .card, .card-header {
+        @media (max-width: 575.98px) {
+            .accordion {
+                width: 100%;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+
+        .card,
+        .card-header {
             background-color: #cedcf9;
             border: 0;
         }
@@ -217,28 +253,55 @@
         .btn-link {
             text-decoration: none;
             color: maroon;
-            width: 100px;
+            width: 115px;
             border: 2px #8aabf1 solid;
+            font-weight: bold;
         }
 
         .btn-link:hover {
             text-decoration: none;
-            color: maroon;
-            width: 100px;
+            color: whitesmoke;
+            width: 115px;
             border: 2px #8aabf1 solid;
+            background-color: #8aabf1;
+            font-weight: bold;
         }
 
         .btn-link:focus {
             text-decoration: none;
-            color: maroon;
-            width: 100px;
+            color: whitesmoke;
+            width: 115px;
             border: 2px #8aabf1 solid;
+            background-color: #8aabf1;
+            font-weight: bold;
         }
 
         .card-body {
-            color: maroon;
-            padding: 0;
-            padding-bottom: 30px;
+            color: whitesmoke;
+            padding: 1rem;
+            background-color: #8aabf1;
+            border-radius: 20px;
+            font-weight: bold;
+        }
+
+
+        /* bagian footer  */
+
+        .main4 {
+            background-color: #8aabf1;
+            width: 100vw;
+            max-width: 100%;
+            box-sizing: border-box;
+            display: flex;
+            height: 300px;
+            text-align: center;
+            color: whitesmoke;
+        }
+
+        .footer-copyright {
+            background-color: slategrey;
+            color: whitesmoke;
+            font-size: 14px;
         }
     </style>
 </head>
@@ -283,35 +346,51 @@
     <div class="main" id="product">
         <div class="container">
             <div class="row row-product">
-                <div class="col-xl-4 col-md-4 col-lg-4 col-sm4 mt-3 mb-3">
-                    <img src="img/chocolate.jpg" alt="chocolate">
-                    <p class="text-product mt-3">Chocolate</p>
+                <div class="col-xl-12 sm-12 why-title">
+                    Your Lovely Product
                 </div>
                 <div class="col-xl-4 col-md-4 col-lg-4 col-sm4 mt-3 mb-3">
-                    <img src="img/coffee.jpg" alt="coffee">
-                    <p class="text-product mt-3">Coffee</p>
+                    <div class="box-product">
+                        <img src="img/chocolate.jpg" alt="chocolate">
+                        <p class="text-product mt-3">Chocolate</p>
+                    </div>
                 </div>
                 <div class="col-xl-4 col-md-4 col-lg-4 col-sm4 mt-3 mb-3">
-                    <img src="img/strawberry.jpg" alt="strawberry">
-                    <p class="text-product mt-3">Strawberry</p>
+                    <div class="box-product">
+                        <img src="img/coffee.jpg" alt="coffee">
+                        <p class="text-product mt-3">Coffee</p>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-md-4 col-lg-4 col-sm4 mt-3 mb-3">
+                    <div class="box-product">
+                        <img src="img/strawberry.jpg" alt="strawberry">
+                        <p class="text-product mt-3">Strawberry</p>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+
     <div class="main2">
         <div class="container">
             <div class="row row-product">
                 <div class="col-xl-4 col-md-4 col-lg-4 col-sm4 mt-3 mb-3">
-                    <img src="img/lemon.jpg" alt="lemon">
-                    <p class="text-product mt-3">Lemon</p>
+                    <div class="box-product">
+                        <img src="img/lemon.jpg" alt="lemon">
+                        <p class="text-product mt-3">Lemon</p>
+                    </div>
                 </div>
                 <div class="col-xl-4 col-md-4 col-lg-4 col-sm4 mt-3 mb-3">
-                    <img src="img/milk.jpg" alt="milk">
-                    <p class="text-product mt-3">Milk</p>
+                    <div class="box-product">
+                        <img src="img/milk.jpg" alt="milk">
+                        <p class="text-product mt-3">Milk</p>
+                    </div>
                 </div>
                 <div class="col-xl-4 col-md-4 col-lg-4 col-sm4 mt-3 mb-3">
-                    <img src="img/greentea.jpg" alt="greentea">
-                    <p class="text-product mt-3">Greentea</p>
+                    <div class="box-product">
+                        <img src="img/greentea.jpg" alt="greentea">
+                        <p class="text-product mt-3">Greentea</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -320,37 +399,43 @@
         <div class="container">
             <div class="row row-why">
                 <div class="col-xl-12 sm-12 why-title">
-                    Why use our product ?
+                    Why Use our Product ?
                 </div>
                 <div class="accordion" id="accordionExample">
                     <div class="card">
-                      <div class="card-header" id="headingOne">
-                        <h2 class="mb-0">
-                          <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                            AMAN
-                          </button>
-                        </h2>
-                      </div>
-                  
-                      <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
-                        <div class="card-body">
-                            Menggunakan bahan dasar organik dan tentunya sudah sesuai dengan standar untuk penggunaan masker wajah, ijin BPOM lagi proses nih.
+                        <div class="card-header" id="headingOne">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link" type="button" data-toggle="collapse"
+                                    data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    SAFE
+                                </button>
+                            </h2>
                         </div>
-                      </div>
+
+                        <div id="collapseOne" class="collapse" aria-labelledby="headingOne"
+                            data-parent="#accordionExample">
+                            <div class="card-body">
+                                Menggunakan bahan dasar organik dan tentunya sudah sesuai dengan standar untuk
+                                penggunaan masker wajah, ijin BPOM lagi proses nih.
+                            </div>
+                        </div>
                     </div>
                     <div class="card">
-                      <div class="card-header" id="headingTwo">
-                        <h2 class="mb-0">
-                          <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                            VARIATIF
-                          </button>
-                        </h2>
-                      </div>
-                      <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
-                        <div class="card-body">
-                            Tersedia banyak varian yang memang disesuaikan dengan kebutuhan wajah kalian masing-masing, kami mengerti kalian banget kok.
+                        <div class="card-header" id="headingTwo">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                    data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    VARIATIVE
+                                </button>
+                            </h2>
                         </div>
-                      </div>
+                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
+                            data-parent="#accordionExample">
+                            <div class="card-body">
+                                Tersedia banyak varian yang memang disesuaikan dengan kebutuhan wajah kalian
+                                masing-masing, kami mengerti kalian banget kok.
+                            </div>
+                        </div>
                     </div>
                     <!-- <div class="card">
                       <div class="card-header" id="headingThree">
@@ -366,11 +451,31 @@
                         </div>
                       </div>
                     </div> -->
-                  </div>
+                </div>
             </div>
         </div>
     </div>
-    <div class="main4" id="findme">ini main content #4</div>
+    <div class="main4" id="findme">
+        <div class="container">
+            <h3>Tunggu apa lagi</h3>
+            <h1>Ambil glowing kamu sekarang</h1>
+        </div>
+        <!-- <div class="container">
+            <div class="row">
+                <div class="col-xl-6 col-md-6 col-lg-6 col-sm-6">
+                    <button type="button" id="whatsapp" class="btn btn-outline-primary"><i
+                            class="fa fa-whatsapp"></i>Whatsapp</button> <br>
+                </div>
+                <div class="col-xl-6 col-md-6 col-lg-6 col-sm-6">
+                    <button type="button" id="shopee" class="btn btn-outline-primary">Shopee</button>
+                </div>
+            </div>
+        </div> -->
+    </div>
+
+    <div class="footer-copyright text-center py-3">
+        created by : Hestu | © 2020 Copyright
+    </div>
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
