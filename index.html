@@ -165,15 +165,7 @@
         }
 
         .main {
-            background-color: rgb(222, 184, 135, 0.6);
-            width: 100vw;
-            max-width: 100%;
-            box-sizing: border-box;
-            display: flex;
-        }
-
-        .main2 {
-            background-color: rgb(133, 236, 133);
+            background-color: #EFE5DC;
             width: 100vw;
             max-width: 100%;
             box-sizing: border-box;
@@ -209,12 +201,12 @@
         /* bagian alasan product */
 
         .main3 {
-            background-color: #cedcf9;
+            background-color: #f7c2b7;
             width: 100vw;
             max-width: 100%;
             box-sizing: border-box;
             display: flex;
-            max-height: 800px;
+            min-height: 45vh;
         }
 
         .why-title {
@@ -246,40 +238,40 @@
 
         .card,
         .card-header {
-            background-color: #cedcf9;
+            background-color: #f7c2b7;
             border: 0;
         }
 
         .btn-link {
             text-decoration: none;
             color: maroon;
-            width: 115px;
-            border: 2px #8aabf1 solid;
+            width: 125px;
+            border: 2px whitesmoke solid;
             font-weight: bold;
         }
 
         .btn-link:hover {
             text-decoration: none;
-            color: whitesmoke;
-            width: 115px;
-            border: 2px #8aabf1 solid;
-            background-color: #8aabf1;
+            color: maroon;
+            width: 125px;
+            border: 2px whitesmoke solid;
+            background-color: whitesmoke;
             font-weight: bold;
         }
 
         .btn-link:focus {
             text-decoration: none;
-            color: whitesmoke;
-            width: 115px;
-            border: 2px #8aabf1 solid;
-            background-color: #8aabf1;
+            color: maroon;
+            width: 125px;
+            border: 2px whitesmoke solid;
+            background-color: whitesmoke;
             font-weight: bold;
         }
 
         .card-body {
-            color: whitesmoke;
+            color: salmon;
             padding: 1rem;
-            background-color: #8aabf1;
+            background-color: whitesmoke;
             border-radius: 20px;
             font-weight: bold;
         }
@@ -288,14 +280,45 @@
         /* bagian footer  */
 
         .main4 {
-            background-color: #8aabf1;
+            background-color: #EFE5DC;
             width: 100vw;
             max-width: 100%;
             box-sizing: border-box;
             display: flex;
             height: 300px;
             text-align: center;
-            color: whitesmoke;
+            color: salmon;
+            overflow-y: hidden;
+        }
+
+        .findme-flex {
+            max-height: 60%;
+        }
+
+        .findme-whatsapp {
+            margin-left: 25vw;
+            transform: scale(130%);
+            margin-top: 40px;
+        }
+
+        .findme-shopee {
+            margin-right: 25vw;
+            transform: scale(130%);
+            margin-top: 40px;
+        }
+
+        @media (max-width: 575.98px) {
+            .findme-whatsapp {
+                margin-left: 0vw;
+                transform: scale(100%);
+                margin-top: 30px;
+            }
+
+            .findme-shopee {
+                margin-right: 0vw;
+                transform: scale(100%);
+                margin-top: 30px;
+            }
         }
 
         .footer-copyright {
@@ -367,13 +390,6 @@
                         <p class="text-product mt-3">Strawberry</p>
                     </div>
                 </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="main2">
-        <div class="container">
-            <div class="row row-product">
                 <div class="col-xl-4 col-md-4 col-lg-4 col-sm4 mt-3 mb-3">
                     <div class="box-product">
                         <img src="img/lemon.jpg" alt="lemon">
@@ -395,6 +411,7 @@
             </div>
         </div>
     </div>
+
     <div class="main3">
         <div class="container">
             <div class="row row-why">
@@ -437,40 +454,45 @@
                             </div>
                         </div>
                     </div>
-                    <!-- <div class="card">
-                      <div class="card-header" id="headingThree">
-                        <h2 class="mb-0">
-                          <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                            Collapsible Group Item #3
-                          </button>
-                        </h2>
-                      </div>
-                      <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
-                        <div class="card-body">
-                          Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                    <div class="card">
+                        <div class="card-header" id="headingThree">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                    data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    AFFORDABLE
+                                </button>
+                            </h2>
                         </div>
-                      </div>
-                    </div> -->
+                        <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
+                            data-parent="#accordionExample">
+                            <div class="card-body">
+                                Gak usah galau soal harga masih ramah kok buat kantong seluruh lapisan, ada paket
+                                ekonomis Rp 30.000 untuk kemasan 25 gr dan Rp 55.000 untuk kemasan 65 gr.
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
     <div class="main4" id="findme">
         <div class="container">
-            <h3>Tunggu apa lagi</h3>
-            <h1>Ambil glowing kamu sekarang</h1>
-        </div>
-        <!-- <div class="container">
-            <div class="row">
-                <div class="col-xl-6 col-md-6 col-lg-6 col-sm-6">
-                    <button type="button" id="whatsapp" class="btn btn-outline-primary"><i
-                            class="fa fa-whatsapp"></i>Whatsapp</button> <br>
+            <div class="row findme-flex">
+                <div class="col ">
+                    <h4>Tunggu apa lagi</h4>
+                    <h1>Ambil glowing kamu sekarang</h1>
                 </div>
-                <div class="col-xl-6 col-md-6 col-lg-6 col-sm-6">
+            </div>
+            <div class="row">
+                <div class="col findme-whatsapp">
+                    <button type="button" id="whatsapp" class="btn btn-outline-primary"><i
+                            class="fa fa-whatsapp"></i>Whatsapp</button>
+                </div>
+                <div class="col findme-shopee">
                     <button type="button" id="shopee" class="btn btn-outline-primary">Shopee</button>
                 </div>
             </div>
-        </div> -->
+        </div>
     </div>
 
     <div class="footer-copyright text-center py-3">
