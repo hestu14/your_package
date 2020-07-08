@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>YourPackage</title>
+    <link rel="icon" type="image/png" href="img/your-package-logo.png">
+
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -197,6 +199,43 @@
             }
         }
 
+        .overlay {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 100%;
+            width: 100%;
+            opacity: 0;
+            transition: .5s ease;
+            background-color: whitesmoke;
+            border-radius: 5%;
+            width: 90%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .text-overlay {
+            color: salmon;
+            font-size: 20px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+
+        .box-image {
+            position: relative;
+        }
+
+        .box-image:hover .overlay {
+            opacity: 0.85;
+        }
+
 
         /* bagian alasan product */
 
@@ -357,9 +396,11 @@
                     <div class="title">
                         <h1>YourPackage</h1>
                         <h4>- Lovely Face Mask -</h4>
-                        <button type="button" id="whatsapp" class="btn btn-outline-primary"><i
+                        <button type="button" id="whatsapp" class="btn btn-outline-primary"
+                            onclick=" window.open('https://api.whatsapp.com/send?phone=628569077541&text=Halo%20kak%20saya%20mau%20order%20','_blank')"><i
                                 class="fa fa-whatsapp"></i>Whatsapp</button> <br>
-                        <button type="button" id="shopee" class="btn btn-outline-primary">Shopee</button>
+                        <button type="button" id="shopee" class="btn btn-outline-primary"
+                            onclick=" window.open('https://shopee.co.id/yourpackage','_blank')">Shopee</button>
                     </div>
                 </div>
             </div>
@@ -374,37 +415,68 @@
                 </div>
                 <div class="col-xl-4 col-md-4 col-lg-4 col-sm4 mt-3 mb-3">
                     <div class="box-product">
-                        <img src="img/chocolate.jpg" alt="chocolate">
+                        <div class="box-image">
+                            <img src="img/chocolate.jpg" alt="chocolate">
+                            <div class="overlay">
+                                <div class="text-overlay">Untuk Wajah Kering</div>
+                            </div>
+                        </div>
                         <p class="text-product mt-3">Chocolate</p>
                     </div>
                 </div>
                 <div class="col-xl-4 col-md-4 col-lg-4 col-sm4 mt-3 mb-3">
                     <div class="box-product">
-                        <img src="img/coffee.jpg" alt="coffee">
+                        <div class="box-image">
+                            <img src="img/coffee.jpg" alt="coffee">
+                            <div class="overlay">
+                                <div class="text-overlay">Untuk Memudarkan Bekas Jerawat</div>
+                            </div>
+                        </div>
                         <p class="text-product mt-3">Coffee</p>
+
                     </div>
                 </div>
                 <div class="col-xl-4 col-md-4 col-lg-4 col-sm4 mt-3 mb-3">
                     <div class="box-product">
-                        <img src="img/strawberry.jpg" alt="strawberry">
+                        <div class="box-image">
+                            <img src="img/strawberry.jpg" alt="strawberry">
+                            <div class="overlay">
+                                <div class="text-overlay">Untuk Wajah Berminyak</div>
+                            </div>
+                        </div>
                         <p class="text-product mt-3">Strawberry</p>
                     </div>
                 </div>
                 <div class="col-xl-4 col-md-4 col-lg-4 col-sm4 mt-3 mb-3">
                     <div class="box-product">
-                        <img src="img/lemon.jpg" alt="lemon">
+                        <div class="box-image">
+                            <img src="img/lemon.jpg" alt="lemon">
+                            <div class="overlay">
+                                <div class="text-overlay">Untuk Wajah Normal yg Cenderung Bruntusan</div>
+                            </div>
+                        </div>
                         <p class="text-product mt-3">Lemon</p>
                     </div>
                 </div>
                 <div class="col-xl-4 col-md-4 col-lg-4 col-sm4 mt-3 mb-3">
                     <div class="box-product">
-                        <img src="img/milk.jpg" alt="milk">
+                        <div class="box-image">
+                            <img src="img/milk.jpg" alt="milk">
+                            <div class="overlay">
+                                <div class="text-overlay">Untuk Wajah Normal</div>
+                            </div>
+                        </div>
                         <p class="text-product mt-3">Milk</p>
                     </div>
                 </div>
                 <div class="col-xl-4 col-md-4 col-lg-4 col-sm4 mt-3 mb-3">
                     <div class="box-product">
-                        <img src="img/greentea.jpg" alt="greentea">
+                        <div class="box-image">
+                            <img src="img/greentea.jpg" alt="greentea">
+                            <div class="overlay">
+                                <div class="text-overlay">Untuk Wajah Sensitif yang Bruntusan</div>
+                            </div>
+                        </div>
                         <p class="text-product mt-3">Greentea</p>
                     </div>
                 </div>
@@ -485,18 +557,20 @@
             </div>
             <div class="row">
                 <div class="col findme-whatsapp">
-                    <button type="button" id="whatsapp" class="btn btn-outline-primary"><i
-                            class="fa fa-whatsapp"></i>Whatsapp</button>
+                    <button type="button" id="whatsapp" class="btn btn-outline-primary"
+                        onclick=" window.open('https://api.whatsapp.com/send?phone=628569077541&text=Halo%20kak%20saya%20mau%20order%20','_blank')">
+                        <i class="fa fa-whatsapp"></i>Whatsapp</button>
                 </div>
                 <div class="col findme-shopee">
-                    <button type="button" id="shopee" class="btn btn-outline-primary">Shopee</button>
+                    <button type="button" id="shopee" class="btn btn-outline-primary"
+                        onclick=" window.open('https://shopee.co.id/yourpackage','_blank')">Shopee</button>
                 </div>
             </div>
         </div>
     </div>
 
     <div class="footer-copyright text-center py-3">
-        created by : Hestu | © 2020 Copyright
+        created by : Hestu | © 2020
     </div>
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
