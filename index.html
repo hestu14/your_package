@@ -407,10 +407,10 @@
                         <h1>YourPackage</h1>
                         <h4>- Lovely Face Mask -</h4>
                         <button type="button" id="whatsapp" class="btn btn-outline-primary"
-                            ondblclick=" window.open('https://api.whatsapp.com/send?phone=628569077541&text=Halo%20kak%20saya%20mau%20order%20','_blank')"><i
+                            onclick=" window.open('https://api.whatsapp.com/send?phone=628569077541&text=Halo%20kak%20saya%20mau%20order%20','_blank')"><i
                                 class="fa fa-whatsapp"></i>Whatsapp</button> <br>
                         <button type="button" id="shopee" class="btn btn-outline-primary"
-                            ondblclick=" window.open('https://shopee.co.id/yourpackage','_blank')">Shopee</button>
+                            onclick=" window.open('https://shopee.co.id/yourpackage','_blank')">Shopee</button>
                     </div>
                 </div>
             </div>
@@ -568,12 +568,12 @@
             <div class="row">
                 <div class="col findme-whatsapp">
                     <button type="button" id="whatsapp" class="btn btn-outline-primary"
-                        ondblclick=" window.open('https://api.whatsapp.com/send?phone=628569077541&text=Halo%20kak%20saya%20mau%20order%20','_blank')">
+                        onclick=" window.open('https://api.whatsapp.com/send?phone=628569077541&text=Halo%20kak%20saya%20mau%20order%20','_blank')">
                         <i class="fa fa-whatsapp"></i>Whatsapp</button>
                 </div>
                 <div class="col findme-shopee">
                     <button type="button" id="shopee" class="btn btn-outline-primary"
-                        ondblclick=" window.open('https://shopee.co.id/yourpackage','_blank')">Shopee</button>
+                        onclick=" window.open('https://shopee.co.id/yourpackage','_blank')">Shopee</button>
                 </div>
             </div>
         </div>
@@ -592,48 +592,6 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
-
-    <script>
-        jQuery.event.special.dblclick = {
-            setup: function (data, namespaces) {
-                var agent = navigator.userAgent.toLowerCase();
-                if (agent.indexOf('iphone') >= 0 || agent.indexOf('ipad') >= 0 || agent.indexOf('ipod') >= 0) {
-                    var elem = this,
-                        $elem = jQuery(elem);
-                    $elem.bind('touchend.dblclick', jQuery.event.special.dblclick.handler);
-                } else {
-                    var elem = this,
-                        $elem = jQuery(elem);
-                    $elem.bind('click.dblclick', jQuery.event.special.dblclick.handler);
-                }
-            },
-            teardown: function (namespaces) {
-                var agent = navigator.userAgent.toLowerCase();
-                if (agent.indexOf('iphone') >= 0 || agent.indexOf('ipad') >= 0 || agent.indexOf('ipod') >= 0) {
-                    var elem = this,
-                        $elem = jQuery(elem);
-                    $elem.unbind('touchend.dblclick');
-                } else {
-                    var elem = this,
-                        $elem = jQuery(elem);
-                    $elem.unbind('click.dblclick', jQuery.event.special.dblclick.handler);
-                }
-            },
-            handler: function (event) {
-                var elem = event.target,
-                    $elem = jQuery(elem),
-                    lastTouch = $elem.data('lastTouch') || 0,
-                    now = new Date().getTime();
-                var delta = now - lastTouch;
-                if (delta > 20 && delta < 500) {
-                    $elem.data('lastTouch', 0);
-                    $elem.trigger('dblclick');
-                } else {
-                    $elem.data('lastTouch', now);
-                }
-            }
-        };
-    </script>
 
 </body>
 
