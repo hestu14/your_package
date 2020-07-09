@@ -10,7 +10,7 @@
     <meta name="keywords" content="face mask, masker wajah, masker aman, ngerti kamu, bruntusan, ">
     <meta name="robots" content="index, follow">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    
+
     <title>YourPackage</title>
     <link rel="icon" type="image/png" href="img/your-package-logo.png">
 
@@ -592,6 +592,48 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
+
+    <script>
+        jQuery.event.special.dblclick = {
+            setup: function (data, namespaces) {
+                var agent = navigator.userAgent.toLowerCase();
+                if (agent.indexOf('iphone') >= 0 || agent.indexOf('ipad') >= 0 || agent.indexOf('ipod') >= 0) {
+                    var elem = this,
+                        $elem = jQuery(elem);
+                    $elem.bind('touchend.dblclick', jQuery.event.special.dblclick.handler);
+                } else {
+                    var elem = this,
+                        $elem = jQuery(elem);
+                    $elem.bind('click.dblclick', jQuery.event.special.dblclick.handler);
+                }
+            },
+            teardown: function (namespaces) {
+                var agent = navigator.userAgent.toLowerCase();
+                if (agent.indexOf('iphone') >= 0 || agent.indexOf('ipad') >= 0 || agent.indexOf('ipod') >= 0) {
+                    var elem = this,
+                        $elem = jQuery(elem);
+                    $elem.unbind('touchend.dblclick');
+                } else {
+                    var elem = this,
+                        $elem = jQuery(elem);
+                    $elem.unbind('click.dblclick', jQuery.event.special.dblclick.handler);
+                }
+            },
+            handler: function (event) {
+                var elem = event.target,
+                    $elem = jQuery(elem),
+                    lastTouch = $elem.data('lastTouch') || 0,
+                    now = new Date().getTime();
+                var delta = now - lastTouch;
+                if (delta > 20 && delta < 500) {
+                    $elem.data('lastTouch', 0);
+                    $elem.trigger('dblclick');
+                } else {
+                    $elem.data('lastTouch', now);
+                }
+            }
+        };
+    </script>
 
 </body>
 
