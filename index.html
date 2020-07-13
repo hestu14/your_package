@@ -14,10 +14,6 @@
     <title>YourPackage</title>
     <link rel="icon" type="image/png" href="img/your-package-logo.png">
 
-
-
-
-
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
@@ -317,6 +313,32 @@
             font-weight: bold;
         }
 
+        .btn-petunjuk {
+            text-decoration: none;
+            color: maroon;
+            width: 250px;
+            font-weight: bold;
+            background-color: #f7c2b7;
+        }
+
+        .btn-petunjuk:hover {
+            text-decoration: none;
+            color: maroon;
+            width: 250px;
+            border: 2px whitesmoke solid;
+            font-weight: bold;
+            background-color: #f7c2b7;
+        }
+
+        .btn-petunjuk:focus {
+            text-decoration: none;
+            color: maroon;
+            width: 250px;
+            border: 2px whitesmoke solid;
+            font-weight: bold;
+            background-color: #f7c2b7;
+        }
+
         .card-body {
             color: salmon;
             padding: 1rem;
@@ -325,6 +347,27 @@
             font-weight: bold;
         }
 
+        .card-petunjuk {
+            padding: 1rem;
+            background-color: #f7c2b7;
+            border-radius: 50px;
+            width: 60%;
+        }
+
+        iframe {
+            width: 496px;
+            height: 480px;
+        }
+
+        @media (max-width: 575.98px) {
+            iframe {
+                display: block;
+                width: 320px;
+                height: 300px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
 
         /* bagian footer  */
 
@@ -550,6 +593,25 @@
                             <div class="card-body">
                                 Gak usah galau soal harga masih ramah kok buat kantong seluruh lapisan, ada paket
                                 ekonomis Rp 30.000 untuk kemasan 25 gr dan Rp 55.000 untuk kemasan 65 gr.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card mt-3">
+                        <div class="card-header" id="headingFour">
+                            <h2 class="mb-0">
+                                <button class="btn collapsed btn-petunjuk" type="button" data-toggle="collapse"
+                                    data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                    ↓ Petunjuk Pemakaian ↓
+                                </button>
+                            </h2>
+                        </div>
+                        <div id="collapseFour" class="collapse" aria-labelledby="headingFour"
+                            data-parent="#accordionExample">
+                            <div class="card-body card-petunjuk">
+                                <div style="text-align: center;">
+                                    <iframe src="https://www.youtube.com/embed/UK3KmIRpMKQ?controls=0">
+                                    </iframe>
+                                </div>>
                             </div>
                         </div>
                     </div>
